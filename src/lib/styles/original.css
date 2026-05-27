@@ -1,0 +1,296 @@
+/* ============================================================
+   NG Stránky — Global Styles
+   Přeneseno z infographer WordPress theme + stylesheet.min.css
+   ============================================================ */
+
+/* --- Reset & Base --- */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  font-family: 'PT Sans', sans-serif;
+  background-color: #fff;
+  color: #4f4f4f;
+  font-size: 13px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: normal;
+  color: #333;
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 40px;
+  line-height: 40px;
+  margin: 0 0 20px;
+}
+
+h3 {
+  font-size: 30px;
+  line-height: 30px;
+  margin: 0 0 10px;
+}
+
+h4 {
+  font-size: 20px;
+  line-height: 20px;
+  margin: 0 0 17px;
+}
+
+p {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  color: #4f4f4f;
+  margin: 10px 0;
+}
+
+a {
+  color: #3c8eba;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #e91b23;
+}
+
+ul { list-style-type: disc; }
+ul li { line-height: 28px; }
+
+img { max-width: 100%; height: auto; display: block; }
+
+/* --- Layout wrapper --- */
+/* Přesně z originálu: .wrapper{width:1200px;margin:0 auto;box-shadow:0 0 3px #969696} */
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  box-shadow: 0 0 3px #969696;
+  overflow: hidden;
+  position: relative;
+}
+
+.container {
+  position: relative;
+  padding: 0;
+  width: 100%;
+  overflow: visible;
+}
+
+.container_inner {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Centrovaný obsah uvnitř full-width sekcí */
+.section-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.clearfix::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/* --- Content sections --- */
+.content_section {
+  background-color: transparent;
+  padding: 80px 0;
+  display: block;
+}
+
+/* --- Grid columns (matching originals) --- */
+.three_columns { width: 100%; }
+.three_columns > .column1 { width: 33.33%; float: left; }
+.three_columns > .column2 { width: 33.33%; float: left; }
+.three_columns > .column3 { width: 33.33%; float: left; }
+
+.four_columns { width: 100%; }
+.four_columns > .column1 { width: 25%; float: left; }
+.four_columns > .column2 { width: 25%; float: left; }
+.four_columns > .column3 { width: 25%; float: left; }
+.four_columns > .column4 { width: 25%; float: left; }
+
+.two_columns_25_75 { width: 100%; }
+.two_columns_25_75 > .column1 { width: 25%; float: left; }
+.two_columns_25_75 > .column2 { width: 75%; float: left; }
+
+.two_columns_75_25 { width: 100%; }
+.two_columns_75_25 > .column1 { width: 75%; float: left; }
+.two_columns_75_25 > .column2 { width: 25%; float: left; }
+
+.two_columns_33_66 { width: 100%; }
+.two_columns_33_66 > .column1 { width: 33.33%; float: left; }
+.two_columns_33_66 > .column2 { width: 66.66%; float: left; }
+
+.column_inner { padding: 0 20px; }
+
+/* --- Button --- */
+.button {
+  display: inline-block;
+  background-color: #e91b23;
+  color: #fff;
+  font-family: 'Oswald', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.button:hover {
+  background-color: #c0151c;
+  color: #fff;
+}
+
+/* --- Separator --- */
+.separator.transparent { background-color: transparent !important; }
+
+/* --- NGBot section dividers --- */
+.ngacek-seda,
+.ngacek-bila {
+  text-align: center;
+  padding: 0;
+  margin: -1px 0;
+}
+
+.ngacek-seda { background-color: #f1f1f1; }
+.ngacek-bila { background-color: #fff; }
+
+.ngacek-seda figure,
+.ngacek-bila figure { margin: 0 auto; }
+
+.ngacek-seda img,
+.ngacek-bila img {
+  display: block;
+  margin: 0 auto;
+  width: 170px;
+  height: auto;
+}
+
+/* --- Footer --- */
+footer {
+  display: block;
+  width: 100%;
+  position: relative;
+  background-color: #262626;
+}
+
+footer a { color: #a0a0a0; }
+footer a:hover { color: #fff; }
+
+footer h4 { color: #fff; }
+
+.footer_top {
+  padding: 55px 0 25px;
+}
+
+.footer_top_holder { display: block; }
+
+.footer_bottom_holder { display: block; }
+
+.footer_bottom {
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background-color: #000;
+  margin: 0;
+  color: #a0a0a0;
+  font-size: 12px;
+}
+
+.footer_bottom a { color: #a0a0a0; }
+.footer_bottom a:hover { color: #fff; }
+
+/* --- No title gap (between slider and content) --- */
+.no_title_gap { height: 65px; }
+
+/* --- Back to top --- */
+#back_to_top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 9999;
+  display: none;
+}
+
+#back_to_top.visible { display: block; }
+
+/* ============================================================
+   Responsive — original breakpoints
+   ============================================================ */
+
+/* Tablet landscape — from responsive.min.css */
+@media screen and (max-width: 1200px) {
+  .wrapper { width: 100%; }
+}
+
+@media only screen and (min-width: 990px) and (max-width: 1200px) {
+  .container_inner, .section-wrap { width: 1000px; }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 990px) {
+  .container_inner, .section-wrap { width: 768px; }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .container_inner, .section-wrap { width: 420px; padding: 0 20px; }
+}
+
+@media only screen and (max-width: 480px) {
+  .container_inner, .section-wrap { width: 300px !important; padding: 0; }
+}
+
+/* Tablet portrait */
+@media screen and (max-width: 1024px) {
+  .three_columns > .column1,
+  .three_columns > .column2,
+  .three_columns > .column3 {
+    width: 100%;
+    float: none;
+  }
+  .four_columns > .column1,
+  .four_columns > .column2,
+  .four_columns > .column3,
+  .four_columns > .column4 {
+    width: 50%;
+  }
+  .two_columns_25_75 > .column1,
+  .two_columns_25_75 > .column2,
+  .two_columns_75_25 > .column1,
+  .two_columns_75_25 > .column2 {
+    width: 100%;
+    float: none;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+  .content_section { padding: 40px 0; }
+
+  h2 { font-size: 28px; line-height: 32px; }
+  h4 { font-size: 16px; }
+
+  .four_columns > .column1,
+  .four_columns > .column2,
+  .four_columns > .column3,
+  .four_columns > .column4 {
+    width: 100%;
+    float: none;
+  }
+
+  .two_columns_33_66 > .column1,
+  .two_columns_33_66 > .column2 {
+    width: 100%;
+    float: none;
+  }
+}
