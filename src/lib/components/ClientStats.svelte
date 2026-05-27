@@ -88,7 +88,7 @@
 
 		<div class="four_columns clearfix">
 			{#each charts as chart, i (chart.id)}
-				<div class="column1">
+				<div class="column{i + 1}">
 					<div class="column_inner">
 						<div class="pie_chart_holder" class:visible>
 
@@ -110,7 +110,7 @@
 										cy={CY}
 										r={R}
 										fill="none"
-										stroke="#3c8eba"
+										stroke="#e91b23"
 										stroke-width="12"
 										stroke-linecap="round"
 										stroke-dasharray={CIRC}
@@ -139,15 +139,20 @@
 		padding: 80px 0;
 	}
 
-	/* Sloupce */
-	.four_columns > .column1 {
+	/* Sloupce — orig: .four_columns>.columnN width 25% float left */
+	.four_columns > .column1,
+	.four_columns > .column2,
+	.four_columns > .column3,
+	.four_columns > .column4 {
 		width: 25%;
 		float: left;
 	}
 
-	.column_inner {
-		padding: 0 20px;
-	}
+	/* Asymetrické odsazení — přesně podle originálu */
+	.four_columns > .column1 > .column_inner { padding: 0 16px 0 0; }
+	.four_columns > .column2 > .column_inner { padding: 0 10px 0 6px; }
+	.four_columns > .column3 > .column_inner { padding: 0 6px 0 10px; }
+	.four_columns > .column4 > .column_inner { padding: 0 0 0 16px; }
 
 	/* --- Pie chart holder --- */
 	.pie_chart_holder {
@@ -224,16 +229,34 @@
 
 	/* --- Responsive --- */
 	@media screen and (max-width: 1024px) {
-		.four_columns > .column1 {
+		.four_columns > .column1,
+		.four_columns > .column2,
+		.four_columns > .column3,
+		.four_columns > .column4 {
 			width: 50%;
+		}
+		.four_columns > .column1 > .column_inner,
+		.four_columns > .column2 > .column_inner,
+		.four_columns > .column3 > .column_inner,
+		.four_columns > .column4 > .column_inner {
+			padding: 0 10px;
 		}
 	}
 
 	@media screen and (max-width: 768px) {
-		.four_columns > .column1 {
+		.four_columns > .column1,
+		.four_columns > .column2,
+		.four_columns > .column3,
+		.four_columns > .column4 {
 			width: 100%;
 			float: none;
 			margin-bottom: 40px;
+		}
+		.four_columns > .column1 > .column_inner,
+		.four_columns > .column2 > .column_inner,
+		.four_columns > .column3 > .column_inner,
+		.four_columns > .column4 > .column_inner {
+			padding: 0;
 		}
 
 		h2 { font-size: 28px; line-height: 32px; }

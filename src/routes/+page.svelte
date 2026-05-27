@@ -7,6 +7,9 @@
 	import QuickContact from '$lib/components/QuickContact.svelte';
 	import Process from '$lib/components/Process.svelte';
 	import References from '$lib/components/References.svelte';
+	import ClientStats from '$lib/components/ClientStats.svelte';
+	import Team from '$lib/components/Team.svelte';
+	import Footer from '$lib/components/Footer.svelte';
 </script>
 
 <Header />
@@ -33,3 +36,10 @@
 
 <References />
 <NgBot src="/images/megafon.png" alt="NG dekorátor" bg="seda" />
+
+<ClientStats />
+<NgBot src="/images/pusa-bila.png" alt="NG dekorátor" bg="bila" />
+
+<Team />
+
+<Footer />

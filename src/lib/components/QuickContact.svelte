@@ -228,6 +228,8 @@
 
 	/* Tlačítko Odeslat */
 	button[type='submit'] {
+		-webkit-appearance: none;
+		appearance: none;
 		font-family: 'Oswald', sans-serif;
 		font-size: 13px;
 		font-weight: 500;

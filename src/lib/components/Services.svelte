@@ -141,15 +141,7 @@
 		border-radius: 50%;
 		background-color: #3c8eba;
 		margin: 0 auto;
-		opacity: 0;
-		transform: scale(0.1);
-		transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
 		cursor: pointer;
-	}
-
-	.fade_in_circle.animate_circle {
-		opacity: 1;
-		transform: scale(1);
 	}
 
 	/* Hover: shake/wobble (původní .animate_shake_hover) */
@@ -165,7 +157,7 @@
 		100% { transform: scale(1) rotate(0deg); }
 	}
 
-	/* --- Ikona uvnitř kruhu --- */
+	/* --- Ikona uvnitř kruhu — animuje se, kruh ne --- */
 	.fade_in_content {
 		display: table-cell;
 		vertical-align: middle;
@@ -173,12 +165,15 @@
 		width: 100%;
 		height: 100%;
 		opacity: 0;
-		transition: opacity 0.4s ease-in-out 0.2s;
+		transform: scale(0.3);
+		transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.15s,
+		            transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.15s;
 	}
 
-	/* Ikona se zobrazí až po animate_circle */
+	/* Ikona scale-in při vstupu do viewportu */
 	.animate_circle .fade_in_content {
 		opacity: 1;
+		transform: scale(1);
 	}
 
 	.fade_in_content svg {
