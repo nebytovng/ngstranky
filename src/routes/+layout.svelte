@@ -1,4 +1,4 @@
-<script lang="ts">
+y<script lang="ts">
 	import '$lib/styles/original.css';
 
 	let { children } = $props();
